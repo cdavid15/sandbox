@@ -45,18 +45,17 @@ function initialize() {
 
     
 
-
-var infowindow = new google.maps.InfoWindow({
-        map: map,
-        position: pos,
-        content: 'Location found using HTML5'
-      });
-
+  var infowindow = new google.maps.InfoWindow({
+      content: 'Location detected using HTML5!'
+  });
 
   var marker = new google.maps.Marker({
       position: pos,
       map: map,
-      title: 'Location found using HTML5!'
+      title: 'Current Location'
+  });
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
   });
 
 
