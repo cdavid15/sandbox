@@ -45,9 +45,21 @@ function initialize() {
 
     
 
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">HTML5 Geolocation</h1>'+
+      '<div id="bodyContent">'+
+      '<p>location has been detected using the HTML5 Geolocation API</p>'+
+      '</div>'+
+      '</div>';
+
   var infowindow = new google.maps.InfoWindow({
-      content: 'Location detected using HTML5!'
+      content: contentString
   });
+
+
+
 
   var marker = new google.maps.Marker({
       position: pos,
